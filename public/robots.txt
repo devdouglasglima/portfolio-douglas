@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://devdouglasglima.github.io/portfolio-douglas/sitemap.xml

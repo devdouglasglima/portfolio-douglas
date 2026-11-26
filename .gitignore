@@ -1,0 +1,29 @@
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Variáveis de ambiente
+.env
+.env.*
+
+# Dependências (caso npm seja adicionado no futuro)
+node_modules/
+
+# Build
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor
+.vscode/settings.json
+*.swp
+*.swo
+
+# Fotografia pessoal — não versionar
+public/images/profile/profile-main.webp
+public/images/profile/profile-main.jpg
+public/images/profile/profile-main.png

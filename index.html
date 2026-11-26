@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#07070F" />
+
+  <title>Douglas — Analista de Governança de TI</title>
+  <meta name="description" content="Profissional de Governança de TI com atuação em integrações de sistemas, automação de processos, APIs e inteligência artificial. Focado em simplificar operações, otimizar recursos e conectar tecnologias." />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Douglas — Governança de TI & Soluções Inteligentes" />
+  <meta property="og:description" content="Portfólio profissional de Douglas, Analista de Governança de TI." />
+  <meta property="og:image"       content="./public/images/og-cover.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Douglas — Analista de Governança de TI" />
+  <meta name="twitter:description" content="Governança de TI, integrações, automação e IA aplicada." />
+
+  <!-- Schema.org Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Douglas",
+    "jobTitle": "Analista de Governança de TI",
+    "sameAs": [
+      "https://www.linkedin.com/in/douglas-lima-aa67b0243",
+      "https://github.com/devdouglasglima"
+    ],
+    "email": "dev.douglas.g.lima@gmail.com"
+  }
+  </script>
+
+  <!-- Three.js via importmap -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.168.0/build/three.module.js"
+    }
+  }
+  </script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./src/css/main.css" />
+</head>
+
+<body>
+
+  <!-- Skip to content (acessibilidade) -->
+  <a href="#hero" class="skip-link">Ir para o conteúdo</a>
+
+  <!-- ═══════════════════════════════════════
+       HEADER
+  ═══════════════════════════════════════ -->
+  <header id="header" role="banner">
+    <div class="container">
+      <div class="header__inner">
+        <a href="#hero" class="header__name" aria-label="Voltar ao início">Douglas</a>
+        <nav class="header__nav" aria-label="Navegação principal">
+          <a href="#cases">Projetos</a>
+          <a href="#about">Sobre</a>
+          <a href="#contact">Contato</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ═══════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════ -->
+    <section id="hero" class="section section--hero" aria-label="Apresentação">
+      <div class="container">
+        <div class="hero__inner">
+
+          <!-- Conteúdo -->
+          <div class="hero__content">
+            <span class="hero__eyebrow">Analista de Governança de TI</span>
+
+            <h1 class="hero__name">Douglas.</h1>
+
+            <p class="hero__tagline">
+              Transformando <em>complexidade</em><br>em soluções inteligentes.
+            </p>
+
+            <p class="hero__description">
+              Profissional de Governança de TI com atuação em integrações de
+              sistemas, automação de processos, APIs e inteligência artificial.
+              Focado em simplificar operações, otimizar recursos e conectar tecnologias.
+            </p>
+
+            <a href="#cases" class="hero__scroll-hint" aria-label="Ver projetos">
+              <span>Explorar</span>
+              <span class="scroll-hint__arrow" aria-hidden="true"></span>
+            </a>
+          </div>
+
+          <!-- Foto -->
+          <div class="hero__photo-wrap" aria-hidden="true">
+            <div class="hero__photo" id="hero-photo">
+              <img
+                src="./public/images/profile/profile-main.webp"
+                alt="Douglas, Analista de Governança de TI"
+                width="380"
+                height="475"
+                loading="eager"
+                onerror="this.closest('#hero-photo').innerHTML = document.getElementById('photo-placeholder').innerHTML"
+              />
+            </div>
+          </div>
+
+          <!-- Template do placeholder (usado via onerror) -->
+          <template id="photo-placeholder">
+            <div class="hero__photo-placeholder" role="img" aria-label="Foto profissional">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="32" cy="22" r="12" stroke="#4F7FFF" stroke-width="1.5"/>
+                <path d="M8 56c0-13.255 10.745-24 24-24s24 10.745 24 24" stroke="#4F7FFF" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              <span>profile-main.webp</span>
+            </div>
+          </template>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         NARRATIVA DO CÉREBRO 3D
+    ═══════════════════════════════════════ -->
+    <div id="brain-wrapper" aria-label="Narrativa: Identificar, Conectar, Automatizar">
+      <div id="brain-sticky">
+
+        <!-- Canvas Three.js -->
+        <canvas id="brain-canvas" aria-hidden="true"></canvas>
+
+        <!-- Overlay de textos narrativos (controlado por JS/scroll) -->
+        <div class="brain-overlay" aria-hidden="true">
+
+          <div class="brain-concept"
+               data-concept="identify"
+               data-show-from="0.30"
+               data-show-to="0.46">
+            <span class="brain-concept__connector"></span>
+            <h2 class="brain-concept__label">IDENTIFICAR</h2>
+            <p class="brain-concept__text">
+              Analisar situações, compreender problemas,
+              investigar processos e reconhecer oportunidades
+              de melhoria.
+            </p>
+          </div>
+
+          <div class="brain-concept"
+               data-concept="connect"
+               data-show-from="0.46"
+               data-show-to="0.62">
+            <span class="brain-concept__connector"></span>
+            <h2 class="brain-concept__label">CONECTAR</h2>
+            <p class="brain-concept__text">
+              Integrar sistemas, APIs, ferramentas e
+              tecnologias para construir soluções consistentes.
+            </p>
+          </div>
+
+          <div class="brain-concept"
+               data-concept="automate"
+               data-show-from="0.62"
+               data-show-to="0.76">
+            <span class="brain-concept__connector"></span>
+            <h2 class="brain-concept__label">AUTOMATIZAR</h2>
+            <p class="brain-concept__text">
+              Transformar processos manuais em fluxos
+              inteligentes, eficientes e escaláveis.
+            </p>
+          </div>
+        </div>
+
+        <!-- Fallback acessível: sem WebGL ou reduced motion -->
+        <div class="brain-fallback" id="brain-fallback" role="region" aria-label="Narrativa de atuação">
+          <div class="brain-fallback-concept reveal">
+            <h2>IDENTIFICAR</h2>
+            <p>Analisar situações, compreender problemas, investigar processos e reconhecer oportunidades de melhoria.</p>
+          </div>
+          <div class="brain-fallback-concept reveal">
+            <h2>CONECTAR</h2>
+            <p>Integrar sistemas, APIs, ferramentas e tecnologias para construir soluções consistentes.</p>
+          </div>
+          <div class="brain-fallback-concept reveal">
+            <h2>AUTOMATIZAR</h2>
+            <p>Transformar processos manuais em fluxos inteligentes, eficientes e escaláveis.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         TRANSIÇÃO
+    ═══════════════════════════════════════ -->
+    <section id="transition" class="section" aria-label="Transição para projetos">
+      <div class="container">
+        <blockquote class="transition-quote reveal">
+          <p class="transition-quote__text">
+            Boas soluções nascem de <em>bons problemas.</em>
+          </p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         ESTUDOS DE CASO
+    ═══════════════════════════════════════ -->
+    <section id="cases" class="section section--cases" aria-labelledby="cases-heading">
+      <div class="container">
+
+        <header class="cases__header reveal">
+          <h2 id="cases-heading">Projetos</h2>
+          <p>Três soluções desenvolvidas no contexto de Governança de TI —<br>cada uma com problema, arquitetura e resultado próprios.</p>
+        </header>
+
+        <!-- ───────────────────────────────
+             CASE 1 — Auditoria com IA
+        ─────────────────────────────── -->
+        <article class="case" id="case-audit" aria-labelledby="case-audit-title">
+          <div class="case__meta">
+            <span class="case__number" aria-hidden="true">01 —</span>
+            <div class="case__meta-text">
+              <h3 class="case__title" id="case-audit-title">Auditoria Inteligente de Chamados com IA</h3>
+              <p class="case__tagline">
+                Dois modelos de IA avaliam cada chamado de forma independente.
+                Acordos registram o resultado automaticamente; divergências vão para validação humana.
+              </p>
+              <div class="case__tags" aria-label="Tecnologias e áreas">
+                <span class="tag tag--core">IA Aplicada</span>
+                <span class="tag tag--core">Automação</span>
+                <span class="tag tag--context">Governança de TI</span>
+                <span class="tag tag--context">ITSM</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="case__body">
+            <!-- Narrativa -->
+            <div class="case__narrative">
+
+              <div class="case__block">
+                <h4>Contexto e Problema</h4>
+                <p>
+                  O ambiente de Governança de TI processa cerca de <strong>15.000 chamados
+                  resolvidos por mês</strong>. Antes da automação, a auditoria era realizada
+                  manualmente e abrangia aproximadamente 10% dos chamados — com foco nas
+                  bases diárias e em situações de pendências e cancelamentos.
+                </p>
+              </div>
+
+              <div class="case__block">
+                <h4>A Solução</h4>
+                <p>
+                  O fluxo classifica os chamados em dois grupos com tratamentos distintos:
+                </p>
+                <ul>
+                  <li>
+                    <strong>Pendentes e cancelados:</strong> dois modelos de IA avaliam o
+                    chamado de forma independente, seguindo as regras de negócio. Quando
+                    concordam, o resultado é registrado. Quando divergem, o chamado é
+                    encaminhado para validação humana — garantindo análise cuidadosa em
+                    casos ambíguos.
+                  </li>
+                  <li>
+                    <strong>Resolvidos:</strong> uma IA atribui uma nota de 0 a 10 à
+                    anotação de resolução, avaliando o nível de detalhamento e qualidade
+                    do registro. Essa nota aparece nos relatórios como referência de
+                    qualidade de documentação.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="case__block">
+                <h4>Relatórios Gerenciais</h4>
+                <p>
+                  Os resultados são centralizados em um banco de dados. Toda
+                  <strong>segunda-feira às 10h</strong>, relatórios automatizados são
+                  enviados por e-mail aos gestores — incluindo conformidades, não
+                  conformidades, pendências por equipe e quantidade de cancelamentos.
+                </p>
+              </div>
+
+              <div class="case__block">
+                <h4>Resultados</h4>
+                <ul class="outcomes-list">
+                  <li class="outcome outcome--confirmed">Dupla avaliação independente por IA para chamados pendentes e cancelados</li>
+                  <li class="outcome outcome--confirmed">Encaminhamento automático de divergências para validação humana</li>
+                  <li class="outcome outcome--confirmed">Relatórios gerenciais automatizados, toda segunda-feira às 10h</li>
+                  <li class="outcome outcome--confirmed">Resultados centralizados em banco de dados único</li>
+                  <li class="outcome outcome--qualitative">Redução da dependência de auditoria exclusivamente manual</li>
+                </ul>
+              </div>
+
+            </div><!-- /case__narrative -->
+
+            <!-- Diagrama -->
+            <div class="case__diagram" aria-label="Diagrama do fluxo de auditoria">
+              <svg viewBox="0 0 320 580" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fluxo: Chamados → Classificação → IA 1 → IA 2 → Acordo ou Validação Humana → Banco de Dados → Relatório">
+                <defs>
+                  <marker id="arr1" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+                    <path d="M1 1 L7 4 L1 7 Z" class="diagram-arrow"/>
+                  </marker>
+                </defs>
+
+                <!-- Chamados -->
+                <g class="diagram-node diagram-node--input">
+                  <rect x="60" y="10" width="200" height="44" rx="8"/>
+                  <text x="160" y="37" text-anchor="middle">~15.000 Chamados / mês</text>
+                </g>
+
+                <!-- Linha: chamados → classificação -->
+                <line class="diagram-line" x1="160" y1="54" x2="160" y2="84" marker-end="url(#arr1)"/>
+
+                <!-- Classificação -->
+                <g class="diagram-node">
+                  <rect x="60" y="84" width="200" height="44" rx="8"/>
+                  <text x="160" y="111" text-anchor="middle">Classificação por Tipo</text>
+                </g>
+
+                <!-- Fork: dois ramos -->
+                <line class="diagram-line" x1="110" y1="128" x2="75"  y2="162" marker-end="url(#arr1)"/>
+                <line class="diagram-line" x1="210" y1="128" x2="260" y2="162" marker-end="url(#arr1)"/>
+
+                <text class="diagram-label" x="68"  y="158">Pendentes /</text>
+                <text class="diagram-label" x="68"  y="170">Cancelados</text>
+                <text class="diagram-label" x="234" y="158">Resolvidos</text>
+
+                <!-- IA 1 -->
+                <g class="diagram-node diagram-node--ai">
+                  <rect x="10" y="178" width="140" height="40" rx="8"/>
+                  <text x="80" y="203" text-anchor="middle">IA de Avaliação 1</text>
+                </g>
+                <line class="diagram-line" x1="80" y1="218" x2="80" y2="248" marker-end="url(#arr1)"/>
+
+                <!-- IA 2 -->
+                <g class="diagram-node diagram-node--ai">
+                  <rect x="10" y="248" width="140" height="40" rx="8"/>
+                  <text x="80" y="273" text-anchor="middle">IA de Avaliação 2</text>
+                </g>
+                <line class="diagram-line" x1="80" y1="288" x2="80" y2="316" marker-end="url(#arr1)"/>
+
+                <!-- Decisão (losango) -->
+                <g class="diagram-node">
+                  <polygon points="80,316 118,342 80,368 42,342"/>
+                  <text x="80" y="346" text-anchor="middle" font-size="10">Acordo?</text>
+                </g>
+
+                <!-- Sim → Banco -->
+                <line class="diagram-line" x1="118" y1="342" x2="160" y2="342" marker-end="url(#arr1)"/>
+                <text class="diagram-label" x="122" y="338">Sim</text>
+
+                <!-- Não → Humano -->
+                <line class="diagram-line" x1="80"  y1="368" x2="80"  y2="398" marker-end="url(#arr1)"/>
+                <text class="diagram-label" x="84" y="390">Não</text>
+                <g class="diagram-node diagram-node--human">
+                  <rect x="10" y="398" width="140" height="40" rx="8"/>
+                  <text x="80" y="423" text-anchor="middle">Validação Humana</text>
+                </g>
+                <line class="diagram-line" x1="80" y1="438" x2="80" y2="460" x2="160" y2="460" marker-end="url(#arr1)"/>
+                <path class="diagram-line" d="M 80 438 Q 80 460 160 460" marker-end="url(#arr1)"/>
+
+                <!-- IA de nota (branch direita) -->
+                <g class="diagram-node diagram-node--ai">
+                  <rect x="190" y="178" width="120" height="40" rx="8"/>
+                  <text x="250" y="197" text-anchor="middle" font-size="10">IA de Qualidade</text>
+                  <text x="250" y="210" text-anchor="middle" font-size="10">de Registro (0-10)</text>
+                </g>
+                <line class="diagram-line" x1="250" y1="218" x2="250" y2="460" marker-end="url(#arr1)"/>
+
+                <!-- Banco de dados -->
+                <g class="diagram-node diagram-node--db">
+                  <rect x="100" y="460" width="120" height="40" rx="8"/>
+                  <text x="160" y="485" text-anchor="middle">Banco de Dados</text>
+                </g>
+                <line class="diagram-line" x1="160" y1="500" x2="160" y2="530" marker-end="url(#arr1)"/>
+
+                <!-- Relatório -->
+                <g class="diagram-node diagram-node--output">
+                  <rect x="60" y="530" width="200" height="40" rx="8"/>
+                  <text x="160" y="549" text-anchor="middle">Relatório Semanal</text>
+                  <text x="160" y="562" text-anchor="middle" font-size="10">(seg, 10h — gestores)</text>
+                </g>
+              </svg>
+            </div><!-- /case__diagram -->
+
+          </div><!-- /case__body -->
+        </article>
+
+        <!-- ───────────────────────────────
+             CASE 2 — Orquestrador de API
+        ─────────────────────────────── -->
+        <article class="case case--reverse" id="case-orchestrator" aria-labelledby="case-orch-title">
+          <div class="case__meta">
+            <span class="case__number" aria-hidden="true">02 —</span>
+            <div class="case__meta-text">
+              <h3 class="case__title" id="case-orch-title">Orquestrador de Requisições de API</h3>
+              <p class="case__tagline">
+                Uma fila inteligente que controla o volume de chamadas ao Freshservice —
+                respeitando limites operacionais e processando por prioridade.
+              </p>
+              <div class="case__tags" aria-label="Tecnologias e áreas">
+                <span class="tag tag--core">Kafka</span>
+                <span class="tag tag--core">APIs</span>
+                <span class="tag tag--context">Freshservice</span>
+                <span class="tag tag--context">Automação</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="case__body">
+            <!-- Narrativa -->
+            <div class="case__narrative">
+
+              <div class="case__block">
+                <h4>Contexto e Problema</h4>
+                <p>
+                  Com o crescimento do interesse de diferentes equipes em automatizar
+                  processos, aumentou o volume de requisições direcionadas ao Freshservice.
+                  A ferramenta possui limites operacionais de requisições por intervalo de
+                  tempo — e picos de chamadas simultâneas arriscavam ultrapassar esses
+                  limites e comprometer as integrações.
+                </p>
+              </div>
+
+              <div class="case__block">
+                <h4>A Solução</h4>
+                <p>
+                  Em vez de cada equipe chamar diretamente a API do Freshservice,
+                  as requisições passam por uma camada de orquestração:
+                </p>
+                <ul>
+                  <li>As automações enviam solicitações para a <strong>API do Multisoft</strong>, que identifica cada equipe por uma identidade própria.</li>
+                  <li>O Multisoft encaminha ao <strong>Kafka</strong>, que mantém as requisições em fila.</li>
+                  <li>O orquestrador libera as requisições para o Freshservice respeitando seu limite operacional — processando primeiro as de <strong>prioridade alta</strong>, depois média e, por último, baixa.</li>
+                  <li>O Freshservice retorna a resposta via <strong>callback</strong> configurado na aplicação Persona, que continua o processamento do fluxo.</li>
+                </ul>
+              </div>
+
+              <div class="case__block">
+                <h4>Resultados</h4>
+                <ul class="outcomes-list">
+                  <li class="outcome outcome--confirmed">Enfileiramento e controle de volume de requisições</li>
+                  <li class="outcome outcome--confirmed">Processamento por três níveis de prioridade (alta, média, baixa)</li>
+                  <li class="outcome outcome--confirmed">Separação de identidade por equipe no Multisoft com chave de API compartilhada</li>
+                  <li class="outcome outcome--qualitative">Menor risco de picos de chamadas sobrecarregarem a integração</li>
+                  <li class="outcome outcome--estimated">Economia potencial em um cenário comparativo: com 20 equipes e custo hipotético de US$ 40 por licença, o uso de uma chave compartilhada representaria uma diferença de ~95% em relação ao modelo de licença individual</li>
+                </ul>
+                <p class="outcome-footnote">¹ Estimativa de cenário comparativo informado — não representa economia financeira já realizada ou confirmada.</p>
+              </div>
+
+            </div><!-- /case__narrative -->
+
+            <!-- Diagrama -->
+            <div class="case__diagram" aria-label="Diagrama do orquestrador de API">
+              <svg viewBox="0 0 320 480" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pipeline: Automações → Multisoft → Kafka → Prioridade → Freshservice → Callback → Persona">
+                <defs>
+                  <marker id="arr2" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+                    <path d="M1 1 L7 4 L1 7 Z" class="diagram-arrow"/>
+                  </marker>
+                </defs>
+
+                <!-- Automações -->
+                <g class="diagram-node diagram-node--input">
+                  <rect x="60" y="10" width="200" height="40" rx="8"/>
+                  <text x="160" y="35" text-anchor="middle">Automações das Equipes</text>
+                </g>
+                <line class="diagram-line" x1="160" y1="50" x2="160" y2="80" marker-end="url(#arr2)"/>
+
+                <!-- Multisoft -->
+                <g class="diagram-node">
+                  <rect x="60" y="80" width="200" height="40" rx="8"/>
+                  <text x="160" y="105" text-anchor="middle">API Multisoft</text>
+                </g>
+                <line class="diagram-line" x1="160" y1="120" x2="160" y2="150" marker-end="url(#arr2)"/>
+
+                <!-- Kafka -->
+                <g class="diagram-node diagram-node--ai">
+                  <rect x="60" y="150" width="200" height="40" rx="8"/>
+                  <text x="160" y="175" text-anchor="middle">Kafka — Fila de Requisições</text>
+                </g>
+                <line class="diagram-line" x1="160" y1="190" x2="160" y2="220" marker-end="url(#arr2)"/>
+
+                <!-- Prioridades -->
+                <g class="diagram-node">
+                  <rect x="10"  y="220" width="90"  height="36" rx="6"/>
+                  <text x="55"  y="237" text-anchor="middle" font-size="10">Alta</text>
+                  <text x="55"  y="250" text-anchor="middle" font-size="9">Prioridade</text>
+                </g>
+                <g class="diagram-node">
+                  <rect x="115" y="220" width="90"  height="36" rx="6"/>
+                  <text x="160" y="237" text-anchor="middle" font-size="10">Média</text>
+                  <text x="160" y="250" text-anchor="middle" font-size="9">Prioridade</text>
+                </g>
+                <g class="diagram-node">
+                  <rect x="220" y="220" width="90"  height="36" rx="6"/>
+                  <text x="265" y="237" text-anchor="middle" font-size="10">Baixa</text>
+                  <text x="265" y="250" text-anchor="middle" font-size="9">Prioridade</text>
+                </g>
+
+                <line class="diagram-line" x1="130" y1="190" x2="55"  y2="220" marker-end="url(#arr2)"/>
+                <line class="diagram-line" x1="160" y1="190" x2="160" y2="220" marker-end="url(#arr2)"/>
+                <line class="diagram-line" x1="190" y1="190" x2="265" y2="220" marker-end="url(#arr2)"/>
+
+                <!-- Merge -->
+                <line class="diagram-line" x1="55"  y1="256" x2="55"  y2="284" />
+                <line class="diagram-line" x1="160" y1="256" x2="160" y2="284" />
+                <line class="diagram-line" x1="265" y1="256" x2="265" y2="284" />
+                <line class="diagram-line" x1="55"  y1="284" x2="265" y2="284" />
+                <line class="diagram-line" x1="160" y1="284" x2="160" y2="314" marker-end="url(#arr2)"/>
+
+                <!-- Freshservice -->
+                <g class="diagram-node diagram-node--db">
+                  <rect x="60" y="314" width="200" height="40" rx="8"/>
+                  <text x="160" y="339" text-anchor="middle">API Freshservice</text>
+                </g>
+                <line class="diagram-line" x1="160" y1="354" x2="160" y2="384" marker-end="url(#arr2)"/>
+
+                <!-- Callback / Persona -->
+                <g class="diagram-node">
+                  <rect x="60" y="384" width="200" height="40" rx="8"/>
+                  <text x="160" y="400" text-anchor="middle">Callback</text>
+                  <text x="160" y="416" text-anchor="middle" font-size="10">(aplicação Persona)</text>
+                </g>
+                <line class="diagram-line" x1="160" y1="424" x2="160" y2="454" marker-end="url(#arr2)"/>
+
+                <!-- Output -->
+                <g class="diagram-node diagram-node--output">
+                  <rect x="60" y="454" width="200" height="20" rx="8"/>
+                  <text x="160" y="468" text-anchor="middle" font-size="10">Continuidade do Fluxo</text>
+                </g>
+              </svg>
+            </div><!-- /case__diagram -->
+
+          </div><!-- /case__body -->
+        </article>
+
+        <!-- ───────────────────────────────
+             CASE 3 — Inventário e ITSM
+        ─────────────────────────────── -->
+        <article class="case" id="case-inventory" aria-labelledby="case-inv-title">
+          <div class="case__meta">
+            <span class="case__number" aria-hidden="true">03 —</span>
+            <div class="case__meta-text">
+              <h3 class="case__title" id="case-inv-title">Integração de Inventário e Ativos ao ITSM</h3>
+              <p class="case__tagline">
+                Sincronização entre a ferramenta de inventário e o Freshservice —
+                vinculando corretamente equipamentos a usuários e trazendo contexto
+                histórico para o atendimento.
+              </p>
+              <div class="case__tags" aria-label="Tecnologias e áreas">
+                <span class="tag tag--core">Integração</span>
+                <span class="tag tag--core">APIs</span>
+                <span class="tag tag--context">Gestão de Ativos</span>
+                <span class="tag tag--context">ITSM</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="case__body">
+            <!-- Narrativa -->
+            <div class="case__narrative">
+
+              <div class="case__block">
+                <h4>Contexto e Problema</h4>
+                <p>
+                  O Araújo Service recebe incidentes e requisições relacionadas aos
+                  equipamentos dos colaboradores. Quando um notebook apresentava falha,
+                  a equipe de atendimento registrava o chamado vinculado a um ativo — mas
+                  os notebooks <strong>não estavam corretamente associados aos respectivos
+                  usuários</strong> no Freshservice. Isso comprometia a confiabilidade das
+                  informações durante o atendimento.
+                </p>
+              </div>
+
+              <div class="case__block">
+                <h4>A Solução</h4>
+                <p>
+                  Foi criada uma integração com uma ferramenta que identifica quem realizou
+                  o <strong>último logon</strong> em cada computador. Essa informação é
+                  consultada e sincronizada com o Freshservice, permitindo relacionar
+                  corretamente o ativo ao usuário correspondente.
+                </p>
+                <p>
+                  Além do último usuário, a integração reflete o <strong>histórico de
+                  movimentação</strong> do ativo — incluindo situações como equipamento
+                  associado a um colaborador, em estoque ou em manutenção — com base nos
+                  dados disponíveis na ferramenta de inventário.
+                </p>
+              </div>
+
+              <div class="case__block">
+                <h4>Resultados</h4>
+                <ul class="outcomes-list">
+                  <li class="outcome outcome--confirmed">Associação correta entre notebook e colaborador no Freshservice</li>
+                  <li class="outcome outcome--confirmed">Maior confiabilidade das informações do ativo durante o atendimento</li>
+                  <li class="outcome outcome--confirmed">Visibilidade do histórico de utilização e movimentação do equipamento</li>
+                  <li class="outcome outcome--qualitative">Mais contexto para tratar incidentes de falha de equipamento</li>
+                  <li class="outcome outcome--qualitative">Apoio à governança e à gestão do ciclo de vida dos ativos</li>
+                </ul>
+              </div>
+
+            </div><!-- /case__narrative -->
+
+            <!-- Diagrama -->
+            <div class="case__diagram" aria-label="Diagrama da integração de inventário">
+              <svg viewBox="0 0 320 380" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fluxo: Ferramenta de Inventário + Último Logon → Integração → Freshservice → Ticket com contexto do ativo">
+                <defs>
+                  <marker id="arr3" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+                    <path d="M1 1 L7 4 L1 7 Z" class="diagram-arrow"/>
+                  </marker>
+                </defs>
+
+                <!-- Ferramenta de Inventário -->
+                <g class="diagram-node diagram-node--input">
+                  <rect x="10" y="30" width="140" height="44" rx="8"/>
+                  <text x="80" y="50" text-anchor="middle" font-size="10">Ferramenta de</text>
+                  <text x="80" y="64" text-anchor="middle" font-size="10">Gestão de Inventário</text>
+                </g>
+
+                <!-- Ferramenta de logon -->
+                <g class="diagram-node diagram-node--input">
+                  <rect x="170" y="30" width="140" height="44" rx="8"/>
+                  <text x="240" y="50" text-anchor="middle" font-size="10">Identificação de</text>
+                  <text x="240" y="64" text-anchor="middle" font-size="10">Último Logon</text>
+                </g>
+
+                <!-- Linhas para integração -->
+                <line class="diagram-line" x1="80"  y1="74" x2="80"  y2="130" marker-end="url(#arr3)"/>
+                <line class="diagram-line" x1="240" y1="74" x2="240" y2="130" marker-end="url(#arr3)"/>
+                <line class="diagram-line" x1="80"  y1="130" x2="240" y2="130"/>
+                <line class="diagram-line" x1="160" y1="130" x2="160" y2="156" marker-end="url(#arr3)"/>
+
+                <!-- Integração -->
+                <g class="diagram-node diagram-node--ai">
+                  <rect x="60" y="156" width="200" height="44" rx="8"/>
+                  <text x="160" y="176" text-anchor="middle">Camada de Integração</text>
+                  <text x="160" y="192" text-anchor="middle" font-size="10">Consulta e Sincronização</text>
+                </g>
+                <line class="diagram-line" x1="160" y1="200" x2="160" y2="230" marker-end="url(#arr3)"/>
+
+                <!-- Freshservice -->
+                <g class="diagram-node diagram-node--db">
+                  <rect x="60" y="230" width="200" height="44" rx="8"/>
+                  <text x="160" y="250" text-anchor="middle">Araújo Service</text>
+                  <text x="160" y="265" text-anchor="middle" font-size="10">(Freshservice)</text>
+                </g>
+                <line class="diagram-line" x1="160" y1="274" x2="160" y2="304" marker-end="url(#arr3)"/>
+
+                <!-- Ticket -->
+                <g class="diagram-node diagram-node--output">
+                  <rect x="30" y="304" width="260" height="54" rx="8"/>
+                  <text x="160" y="326" text-anchor="middle">Ticket com Contexto do Ativo</text>
+                  <text x="160" y="342" text-anchor="middle" font-size="10">usuário · histórico · situação atual</text>
+                </g>
+              </svg>
+            </div><!-- /case__diagram -->
+
+          </div><!-- /case__body -->
+        </article>
+
+      </div><!-- /container -->
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SOBRE
+    ═══════════════════════════════════════ -->
+    <section id="about" class="section section--about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about__inner">
+
+          <div class="about__body reveal">
+            <h2 id="about-heading" class="about__lead">
+              Trabalho na interseção entre Governança de TI,
+              processos operacionais e tecnologia aplicada.
+            </h2>
+            <p>
+              Como Analista de Governança de TI, meu trabalho começa pela compreensão do
+              problema. Antes de qualquer solução, o processo precisa ser entendido: onde
+              estão os gargalos, quais informações estão faltando, quais ferramentas já
+              existem e o que ainda precisa ser construído.
+            </p>
+            <p>
+              A partir disso, o trabalho é conectar — integrar sistemas, automatizar fluxos
+              e estruturar soluções que tornem a operação mais eficiente, rastreável e
+              escalável. O uso de inteligência artificial entra como ferramenta para ampliar
+              o alcance dessas soluções, não como fim em si.
+            </p>
+          </div>
+
+          <div class="reveal">
+            <h3 class="about__skills-title">Competências</h3>
+            <div class="skills-grid reveal-stagger">
+              <span class="skill skill--core">Governança de TI</span>
+              <span class="skill skill--core">ITSM · ITIL</span>
+              <span class="skill skill--core">Integração de APIs</span>
+              <span class="skill skill--core">Automação de Processos</span>
+              <span class="skill skill--core">IA Aplicada a Processos</span>
+              <span class="skill skill--core">Python</span>
+              <span class="skill skill--supporting">JavaScript</span>
+              <span class="skill skill--supporting">n8n</span>
+              <span class="skill skill--supporting">Kafka</span>
+              <span class="skill skill--supporting">Freshservice</span>
+              <span class="skill skill--context">Gestão de Incidentes</span>
+              <span class="skill skill--context">Gestão de Ativos</span>
+              <span class="skill skill--context">Análise de Processos</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════
+       CONTATO
+  ═══════════════════════════════════════ -->
+  <footer id="contact" role="contentinfo" aria-labelledby="contact-heading">
+    <p class="contact__label" id="contact-heading">Vamos conversar.</p>
+
+    <nav class="contact__links" aria-label="Links de contato">
+      <a href="https://www.linkedin.com/in/douglas-lima-aa67b0243"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="contact__link"
+         aria-label="Perfil LinkedIn de Douglas (abre em nova aba)">
+        <!-- LinkedIn icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+          <rect x="2" y="9" width="4" height="12"/>
+          <circle cx="4" cy="4" r="2"/>
+        </svg>
+        <span>LinkedIn</span>
+      </a>
+
+      <a href="https://github.com/devdouglasglima"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="contact__link"
+         aria-label="GitHub de Douglas, devdouglasglima (abre em nova aba)">
+        <!-- GitHub icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+        </svg>
+        <span>GitHub</span>
+      </a>
+
+      <a href="mailto:dev.douglas.g.lima@gmail.com"
+         class="contact__link"
+         aria-label="Enviar e-mail para Douglas">
+        <!-- Email icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+        <span>E-mail</span>
+      </a>
+    </nav>
+
+    <p class="contact__copy">© 2025 Douglas. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- ─── Scripts ─── -->
+  <!-- GSAP carrega como script global (antes do módulo ES) -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <!-- Entry point ES module -->
+  <script type="module" src="./src/js/main.js"></script>
+
+</body>
+</html>
