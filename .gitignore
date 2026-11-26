@@ -23,7 +23,7 @@ npm-debug.log*
 *.swp
 *.swo
 
-# Fotografia pessoal — não versionar
-public/images/profile/profile-main.webp
-public/images/profile/profile-main.jpg
-public/images/profile/profile-main.png
+# Fotografias pessoais (descomente para ignorar)
+# public/images/profile/profile-main.webp
+# public/images/profile/profile-main.jpg
+# public/images/profile/profile-main.png
